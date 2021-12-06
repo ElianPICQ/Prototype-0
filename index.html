@@ -1,0 +1,176 @@
+<!-- Prototype Epika - 1er VaporWave -->
+
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+	<title>Epika</title>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<link rel="stylesheet" type="text/css" href="epika.css" />
+</head>
+<body>
+	<div id="grille-cathodique"></div>
+	<header>
+		<nav>
+			<!-- Barre de navigation -->
+		</nav>
+	</header>
+
+	<div id="page-container">
+		<h1>Bienvenue</h1>
+
+		<div id="shifumi">
+
+			<label id="shifumi__toggle">
+				<input id="shifumi__toggle__input" type="checkbox" />
+				<span id="shifumi__toggle__button"></span>
+			</label>
+
+			<form id="shifumi-box" action="" method="get" class="hide">
+
+				<h3 id="shifumi-title">Shifumi</h3>
+				  
+				<div id="shifumi-choice">
+					<label id="pierre">
+						<input type="radio" id="pierre__input" name="shifumi-value" value="pierre" />
+						<span id="shifumi-pierre-display"></span>
+					</label>
+
+					<label id="feuille">
+						<input type="radio" id="feuille__input" name="shifumi-value" value="feuille" />
+						<span id="shifumi-feuille-display"></span>
+					</label>
+
+					<label id="ciseaux">
+						<input type="radio" id="ciseaux__input" name="shifumi-value" value="ciseaux" />
+						<span id="shifumi-ciseaux-display"></span>
+					</label>
+				</div>
+				  
+				<input type="submit" id="shifumi-submit" value="Confirmer"/>
+
+				<div id="shifumi-fight">
+				  <div id="user-choice"></div>
+				  <div id="my-choice"></div>
+				</div>
+
+				<div id="score">
+				  <div id="user-score"><span>Toi:</span><span id="display-user-score"></span></div>
+				  <div id="my-score"><span>Moi:</span><span id="display-my-score"></span></div>
+				</div>
+			  
+			</form>
+		</div>
+
+		<!-- Infinite Sword -->
+
+		<div id="sword-container" class="slide-in-right">
+
+			<label id="sword-toggle">
+				<input id="sword-toggle__input" type="checkbox" />
+				<span id="sword-toggle__button"></span>
+			</label>
+
+			<div id="fourreau" class="hide">
+				<div id="sword">
+					<pre id="sword__handle">
+               _
+             _/-\_
+            ( |=| )
+           (  |=|  )
+            ||___||
+             |   |
+             |===|
+             |   |
+             |   |
+             |===|
+             |   |
+     /|______|___|______|\
+    _|       (|-|)       |_
+  _/    o    (|-|)   o     \_
+ /     _O    (|-|)   O_      \
+(            (/-\)            )
+ \|\/\/__\/\/\"""/\/\/__\/\/|/
+       |  |  Y   Y  |  |
+       |  |  | Y |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |
+       |  |  | | |  |  |</pre>
+
+		<pre id="sword__blade">
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |
+|  |  | | |  |  |</pre>
+<pre id="sword__tip" class="hide-sword">
+|  |  | | |  |  |
+\  |  | | |  |  /
+ \ |  | | |  | /
+  \|  | | |  |/
+   \  | | |  /
+    \ | | | /
+     \| | |/
+      \ | /
+       \|/
+
+</pre>
+				</div>
+			</div>
+		</div>
+
+		<div id="skills-card">
+			<div id="skills-inner">
+				<div id="skills-hide">
+					<h3>Skills</h3>
+				</div>
+				<div id="skills-show">
+					<ul>
+						<li>HTML</li>
+						<li>CSS - SCSS</li>
+						<li>JavaScript</li>
+						<li>Unix Shell</li>
+						<li>C</li>
+						<li>GitHub</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="epika.js"></script>
+</body>
+</html>
