@@ -6,9 +6,12 @@
 }
 
 :root {
+	--clr-blue: #08f;
+	--clr-blue-transparent: #0088ff70;
 	--clr-white: #fff;
 	--clr-pink: #ff4da6;
 	--clr-pink-dark: #e60073;
+	--clr-pink-dark-transparent: #e6007370;
 	--clr-green: #80f753;
 	--clr-green-dark: #38b00b;
 }
@@ -97,31 +100,44 @@ header {
   }
 }
 
+
+  /***********/
+ /* SHIFUMI */
+/***********/
+
 #shifumi {
-	width: 0;
-	height: 0;
-	margin: 50px auto 0 50px;
+	width: 450px;
+	height: 120px;
+	margin: 100px auto 0 75px;
 
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	&__toggle {
-		border-radius: 25%;
-		width: 50px;
-		height: 50px;
+		width: 20px;
+		height: 190px;
+		display: inline-block;
 
-		position: absolute;
-		top: -25px;
-		left: -25px;
-
+		position: relative;
 		z-index: 1;
+
+		cursor: pointer;
 
 		&__button {
 			position: absolute;
 			top: 0; left: 0; bottom: 0; right: 0;
-			background-color: #444;
 
-			transform: rotate(0deg);
-			transition: 1.3s ease-in-out;
+			background-color: var(--clr-blue-transparent);
+			border-radius: 15px;
+			box-shadow: 0 0 25px 5px var(--clr-white),
+				inset 0 0 15px var(--clr-white),
+				0 0 100px 20px var(--clr-blue),
+				inset 0 0 20px var(--clr-blue),
+				0 0 190px 30px var(--clr-blue);
+
+			transition: all 1.3s ease-in-out;
 		}
 
 		&__input {
@@ -130,31 +146,36 @@ header {
 			height: 0;
 
 			&:checked + #shifumi__toggle__button {
-				background-color: var(--clr-white);
-				transform: rotate(720deg);
-				transition: 1.3s ease-in-out;
+				background-color: var(--clr-pink-dark-transparent);
+				box-shadow: 0 0 25px 5px var(--clr-white),
+					inset 0 0 15px var(--clr-white),
+					0 0 100px 20px var(--clr-pink-dark),
+					inset 0 0 20px var(--clr-pink-dark),
+					0 0 190px 30px var(--clr-pink-dark);
+				transition: all 1.3s ease-in-out;
 			}
 		}
 
 	}
 
 	#shifumi-box {
-	  width: 500px;
-	  height: 375px;
-	  
-	  border: solid 2px green;
+	  width: 450px;
+	  height: 120px;
 	  
 	  display: flex;
-	  flex-direction: column;
+	  flex-direction: row-reverse;
 	  justify-content: space-between;
 	  align-items: center;
 
-		transform-origin: top left;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
 
-	  #shifumi-title {
-	    font-weight: bold;
-	    text-decoration: underline;
-	  }
+		transform-origin: left;
+
+		background-color: #310441;
+		border-radius: 25px;
+		box-shadow: 4px 2px 10px black;
 
 	  #shifumi-choice {
 	    border: 1px solid red;
@@ -267,6 +288,24 @@ header {
 	    }
 	  }
 
+	  #shifumi-submit {
+			width: 120px;
+			height: 30px;
+			position: relative;
+
+		  input {
+		  	width: 0;
+		  	height: 0;
+		  	opacity: 0;
+		  }
+		  span {
+		  	position: absolute;
+		  	top: 0; left: 0; right: 0; bottom: 0;
+		  	text-align: center;
+		  	transform: rotate(-90deg);
+		  }
+		}
+
 	  #shifumi-fight {
 	    width: 80%;
 	    height: 75px;
@@ -284,37 +323,36 @@ header {
 	      border-right: solid 1px grey;
 	    }
 	  }
+	}
 
-	  #score {
-	    width: 100%;
-	    height: 55px;
-	    
-	    display: flex;
-	    flex-direction: row;
-	    justify-content: space-around;
-	    
-	    border: solid 1px red;
 
-	    div {
-	      width: 55px;
-	      height: 55px;
-	      
-	      display: flex;
-	      flex-direction: column;
-	      justify-content: space-around;
-	      
-	      border: solid 1px red;
+	#score {
+  	width: 100%;
+    height: 55px;
 
-	      span {
-	        width: 100%;
-	        height: 20px;
-	        
-	        text-align: center;
-	        
-	        border: solid 1px yellow;
-	      }
-	    }
-	  }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border: solid 1px red;
+
+	div {
+    	width: 55px;
+      height: 55px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      border: solid 1px red;
+
+      span {
+      	width: 100%;
+        height: 20px;
+        text-align: center;
+        border: solid 1px yellow;
+			}
+		}
 	}
 }
 
@@ -394,14 +432,14 @@ header {
 /* Affichage des mini-jeux */
 
 .hide {
-	transform: scale(0);
+	transform: scaleX(0);
 	transition-timing-function: ease-in-out;
 	transition-duration: 1s;
 	transition-delay: .3s;
 }
 
 .show {
-	transform: scale(1.0);
+	transform: scaleX(1.0);
 	transition-timing-function: ease-in-out;
 	transition-duration: 1s;
 	transition-delay: .3s;

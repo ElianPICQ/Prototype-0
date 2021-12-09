@@ -11,8 +11,8 @@ const plateauShifumi = document.getElementById('shifumi-box');
 const pierre = document.getElementById('pierre__input');
 const feuille = document.getElementById('feuille__input');
 const ciseaux = document.getElementById('ciseaux__input');
-const userChoice = document.getElementById('user-choice');
-const botChoice = document.getElementById('my-choice');
+/*const userChoice = document.getElementById('user-choice');
+const botChoice = document.getElementById('my-choice');*/
 const displayUserScore = document.getElementById('display-user-score');
 const displayBotScore = document.getElementById('display-my-score');
 
@@ -21,55 +21,55 @@ plateauShifumi.addEventListener('submit', function(event) {
   var calcBotChoice = Math.floor(Math.random() * 3);
 
   if (pierre.checked) {
-    userChoice.innerHTML = "Pierre";
+/*    userChoice.innerHTML = "Pierre";*/
     
     switch ((calcBotChoice + 1) % 3) {
       case 0:
         userScore++;
-        botChoice.innerHTML = "Ciseaux";
+/*        botChoice.innerHTML = "Ciseaux";*/
         break;
       case 1:
-        botChoice.innerHTML = "Pierre";
+/*        botChoice.innerHTML = "Pierre";*/
         break;
       case 2:
         botScore++;
-        botChoice.innerHTML = "Feuille";
+ /*       botChoice.innerHTML = "Feuille";*/
         break
     }
   }
   
   if (feuille.checked) {
-    userChoice.innerHTML = "Feuille";
+/*    userChoice.innerHTML = "Feuille";*/
     
     switch ((calcBotChoice + 1) % 3) {
       case 0:
         botScore++;
-        botChoice.innerHTML = "Ciseaux";
+/*        botChoice.innerHTML = "Ciseaux";*/
         break;
       case 1:
         userScore++
-        botChoice.innerHTML = "Pierre";
+/*        botChoice.innerHTML = "Pierre";*/
         break;
       case 2:
-        botChoice.innerHTML = "Feuille";
+/*        botChoice.innerHTML = "Feuille";*/
         break;
     }
   }
   
   if (ciseaux.checked) {
-    userChoice.innerHTML = "Ciseaux";
+/*    userChoice.innerHTML = "Ciseaux";*/
     
     switch ((calcBotChoice + 1) % 3) {
       case 0:
-        botChoice.innerHTML = "Ciseaux";
+/*        botChoice.innerHTML = "Ciseaux";*/
         break;
       case 1:
         botScore++;
-        botChoice.innerHTML = "Pierre";
+/*        botChoice.innerHTML = "Pierre";*/
         break;
       case 2:
         userScore++;
-        botChoice.innerHTML = "Feuille";
+/*       botChoice.innerHTML = "Feuille";*/
         break;
     }
   }
